@@ -7,50 +7,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  <div class="content">
-    <div>`
-      <h1>
-      albumArkiv
-      </h1>
-      <div class="table" style="margin-left: auto; margin-right: auto;">
-        <div class="row">
-            <div class="cell">Album</div>
-            <div class="cell">Kunstner</div>
-            <div class="cell">Sange</div>
-            <div class="cell">Valgfri Oplysning</div>
-        </div>
-        <div class="row">
-            <div class="cell">Greatest Hits</div>
-            <div class="cell">ZZ Top</div>
-            <div class="cell">18</div>
-            <div class="cell">Bandets frontmen har et cool look karakteriseret ved deres lange skæg</div>
-        </div>
-        <div class="row">
-            <div class="cell">Wild Cherry</div>
-            <div class="cell">Wild Cherry</div>
-            <div class="cell">13</div>
-            <div class="cell">Deres mest afspilte sang er "Play That Funky Music"</div>
-        </div>
-        <div class="row">
-            <div class="cell">Top gun - motion picture soundtrack</div>
-            <div class="cell">Various</div>
-            <div class="cell">10</div>
-            <div class="cell">Tom Cruise er i hovedrollen</div>
-        </div>
-        <div class="row">
-            <div class="cell">Hjertestarter - bonus edition</div>
-            <div class="cell">Nephew</div>
-            <div class="cell">11</div>
-            <div class="cell">Simon Kvamm fra Nephew er dommer i X-factor</div>
-        </div>
-        <div class="row">
-            <div class="cell">USADSB</div>
-            <div class="cell">Newphew</div>
-            <div class="cell">10</div>
-            <div class="cell">Malte Ebert fortolkede SuperLiga i Toppen af Poppen 2021, hvor han omdøbte sangen "superligeglad"</div>
-        </div>
-    </div>
-  </div>
+    <select name="dropdown" id="genre-select"></select>
+    <table>
+      <thead>
+        <th>albumName</th>
+        <th>artistName</th>
+        <th>productionYear</th>
+      </thead>
+      <tbody id="data"></tbody>
+    </table>
+
     <script src="script.js"></script>
   </body>
 </html>
