@@ -15,22 +15,20 @@ d3.json("albums.json").then((data) => {
     .append("option") // Append the new 'option' elements to the dropdown list
     .text((d) => d); // Set the text of each 'option' element to be the genre
 
-  // Add a 'change' event listener to the dropdown list
+  // Set the text of each 'div' element to be the album name and artist name
   select.on("change", function () {
-    // Get the genre that was selected
     const selectedGenre = d3.select(this).property("value");
-    // Filter the data to get the albums that have the selected genre
     const filteredAlbums = data.filter((item) => item.genre === selectedGenre);
-
-    // Select the div with id 'albums-list'
     const list = d3.select("#albums-list");
-    // Bind the filtered albums data to the 'div' elements of the list
+    list.selectAll("tr").remove();
     list
-      .selectAll("th")
+      .selectAll("tr")
       .data(filteredAlbums)
-      .enter() // Create new 'div' elements for each item in the data that doesn't already have an associated 'div' element
-      .append("th") // Append the new 'div' elements to the list
-      .text((d) => `${d.albumName} by ${d.artistName}`); // Set the text of each 'div' element to be the album name and artist name
+      .enter()
+      .append("tr")
+      .text(
+        (d) => `${d.albumName} by ${d.artistName} made in ${d.productionYear}`
+      );
   });
 });
 

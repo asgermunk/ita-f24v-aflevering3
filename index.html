@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Aflevering 3</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
   </head>
   <body>
+    <select name="dropdown" id="genre-select"></select>
+    <table>
+      <thead>
+        <th>albumName</th>
+        <th>artistName</th>
+        <th>productionYear</th>
+      </thead>
+      <tbody id="albums-list"></tbody>
+    </table>
+
     <script src="script.js"></script>
   </body>
 </html>
