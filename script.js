@@ -47,7 +47,7 @@ d3.json("albums.json").then((data) => {
       .text((d) => `${d.productionYear}`);
   });
 });
-//123
+//12
 
 // d3.json("albums.json").then((data) => {
 //   const albums = data.map((item) => {
