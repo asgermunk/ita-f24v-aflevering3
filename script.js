@@ -31,6 +31,7 @@ d3.json("albums.json").then((data) => {
       );
   });
 });
+//123
 
 // d3.json("albums.json").then((data) => {
 //   const albums = data.map((item) => {
