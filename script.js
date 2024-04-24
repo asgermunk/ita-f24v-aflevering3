@@ -1,11 +1,18 @@
-const w = 500;
-const h = 500;
-const padding = 20;
-
 d3.json("albums.json").then((data) => {
   const list = [];
+  const albumName = [];
+  const artistName = [];
+  const genre = [];
   for (let i = 0; i < data.length; i++) {
-    list.push(data[i].value);
+    albumName.push(data[i].albumName);
   }
-  console.log(list);
+  console.log(albumName);
+  for (let i = 0; i < data.length; i++) {
+    artistName.push(data[i].artistName);
+  }
+  console.log(artistName);
+  for (let i = 0; i < data.length; i++) {
+    genre.push(data[i].genre);
+  }
+  console.log(genre);
 });
