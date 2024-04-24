@@ -1,7 +1,11 @@
-fetchData("/albums.json").then((data) => {});
+const w = 500;
+const h = 500;
+const padding = 20;
 
-async function fetchData(url) {
-  let request = await fetch(url);
-  let json = await request.json();
-  return json;
-}
+d3.json("albums.json").then((data) => {
+  const list = [];
+  for (let i = 0; i < data.length; i++) {
+    list.push(data[i].value);
+  }
+  console.log(list);
+});
