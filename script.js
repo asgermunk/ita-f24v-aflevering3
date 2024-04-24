@@ -19,16 +19,32 @@ d3.json("albums.json").then((data) => {
   select.on("change", function () {
     const selectedGenre = d3.select(this).property("value");
     const filteredAlbums = data.filter((item) => item.genre === selectedGenre);
-    const list = d3.select("#albums-list");
-    list.selectAll("tr").remove();
-    list
-      .selectAll("tr")
+    const listalbum = d3.select("#albums-list");
+    const listartist = d3.select("#artist-name");
+    const listproductionYear = d3.select("#production-year");
+    listalbum.selectAll("tr").remove();
+    listartist.selectAll("tr").remove();
+    listproductionYear.selectAll("tr").remove();
+    listalbum
+      .selectAll("#albums-list")
       .data(filteredAlbums)
       .enter()
       .append("tr")
-      .text(
-        (d) => `${d.albumName} by ${d.artistName} made in ${d.productionYear}`
-      );
+      .text((d) => `${d.albumName} or ${d.artistName}`);
+
+    listartist
+      .selectAll("#artist-name")
+      .data(filteredAlbums)
+      .enter()
+      .append("tr")
+      .text((d) => `${d.artistName}`);
+
+    listproductionYear
+      .selectAll("#production-year")
+      .data(filteredAlbums)
+      .enter()
+      .append("tr")
+      .text((d) => `${d.productionYear}`);
   });
 });
 //123
