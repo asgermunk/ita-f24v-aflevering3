@@ -20,18 +20,24 @@ d3.json("albums.json").then((data) => {
       const selectedGenre = d3.select(this).property("value");
       const filteredAlbums = data.filter((item) => item.genre === selectedGenre);
       const list = d3.select("#albums-list");
+      
       list.selectAll("tr").remove();
-  
+    
       const rows = list
         .selectAll("tr")
         .data(filteredAlbums)
         .enter()
         .append("tr");
-  
+    
       rows.append("td").text((d) => d.albumName);
-  
       rows.append("td").text((d) => d.artistName);
-  
       rows.append("td").text((d) => d.productionYear);
+      d3.select("#toggle-albums-button").on("click", function() {
+        // Toggle the visibility of the rows that match the selected genre
+        list.selectAll("tr").style("display", function(d) {
+          return (d.genre === selectedGenre && d3.select(this).style("display") === "none") ? "" : "none";
+        });
+      });
+     
+      });
     });
-  });
