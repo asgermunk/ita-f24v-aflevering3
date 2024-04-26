@@ -5,6 +5,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  
+  
 }
 
 table {
@@ -43,27 +45,6 @@ tbody tr:hover {
   background-color: #e0e0e0;
   transition: background-color 0.5s ease-in-out;
 }
-/* Add styles for the button */
-#toggle-albums-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  background-color: #333;
-  color: #e8f5eb;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-/* Style the button on hover */
-#toggle-albums-button:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Hide the table when the button is clicked */
-.hide-table #albums-list {
-  display: none;
-}
 .container {
   display: flex;
   justify-content: center; /* Centrerer containeren vandret */
@@ -74,4 +55,23 @@ tbody tr:hover {
 font-family: 'Trebuchet MS';
   font-weight: bold;
   margin-bottom: 20px;
+}
+#subtitle {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+#genre-select {
+  width: 200px;
+  height: 35px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: 'Trebuchet MS';
 }
