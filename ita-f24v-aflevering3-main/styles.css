@@ -64,3 +64,14 @@ tbody tr:hover {
 .hide-table #albums-list {
   display: none;
 }
+.container {
+  display: flex;
+  justify-content: center; /* Centrerer containeren vandret */
+}
+#title {
+  text-align: center;
+  font-size: 36px;
+font-family: 'Trebuchet MS';
+  font-weight: bold;
+  margin-bottom: 20px;
+}
