@@ -49,16 +49,15 @@ tbody tr:hover {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #333;
+  color: #e8f5eb;
   cursor: pointer;
-  border-radius: 5px;
   margin-bottom: 20px;
 }
 
 /* Style the button on hover */
 #toggle-albums-button:hover {
-  background-color: #0056b3;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Hide the table when the button is clicked */
